@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_title %}
+  iBlog | Login
+{% endblock page_title %}
+{% block css %}
+  <link rel="stylesheet" href="{% static "authapp/css/output/sign-in.css" %}">
+{% endblock css %}
+{% block content %}
+  <div class="form-container">
+    <h1>User Login</h1>
+    <form action="{% url "authapp:sign-in" %}" method="post">
+      {% csrf_token %}
+      {% if form_error %}<strong class="form-error">{{ form_error }}</strong>{% endif %}
+      {% for field in form %}
+        <div class="form-group">
+          {{ field.label_tag }}
+          {{ field }}
+        </div>
+      {% endfor %}
+      <button type="submit">Login</button>
+    </form>
+  </div>
+{% endblock content %}

@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "baseStatic":"tailwindcss -i static\\css\\input.css -o static\\css\\output.css --watch",
+    "authappSignUpStatic": "tailwindcss -i authapp\\static\\authapp\\css\\input\\sign-up.css -o authapp\\static\\authapp\\css\\output\\sign-up.css --watch",
+    "authappSignInStatic": "tailwindcss -i authapp\\static\\authapp\\css\\input\\sign-in.css -o authapp\\static\\authapp\\css\\output\\sign-in.css --watch",
+    "dev": "concurrently --kill-others \"npm run baseStatic\" \"npm run authappSignUpStatic\" \"npm run authappSignInStatic\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "prettier": "^3.2.1",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "tailwindcss": "^3.4.1"
+  }
+}
