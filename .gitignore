@@ -1,0 +1,51 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local development settings
+.env
+Pipfile
+
+# Django generated files
+db.sqlite3
+*.pyc
+*.pyo
+
+# Static files
+staticfiles/
+
+# Media files
+media/
+
+# Virtual environment
+venv/
+env/
+
+# Tailwind CSS build directory
+node_modules/
+dist/
+
+# Log files
+*.log
+
+# Visual Studio Code specific files
+.vscode/
+
+# macOS specific files
+.DS_Store
+
+# Editor-specific project settings
+.idea/
+
+# Temporary files
+*.swp
+
+# Ignore the production-ready CSS file
+*.css
+
+#ignore vscode workspace config
+.vscode
+
+# ignore migrations
+migrations
