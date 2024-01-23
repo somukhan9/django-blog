@@ -49,20 +49,20 @@ class SignUpForm(forms.ModelForm):
         return cleaned_data
 
     def save(self, commit=True) -> Any:
-        try:
-            password = self.cleaned_data["password"]
-            user = super().save(commit=False)
-            user.set_password(password)
-            user.is_staff = True
-            print(password)
-            if commit:
-                user.save()
+        # try:
+        password = self.cleaned_data["password"]
+        user = super().save(commit=False)
+        user.set_password(password)
+        user.is_staff = True
+        print(password)
+        if commit:
+            user.save()
 
-            return user
+        return user
 
-        except Exception as ex:
-            print(ex.args[0])
-            print("Hello")
+        # except Exception as ex:
+        #     print(ex.args[0])
+        #     print("Hello")
             # print(dict(ex)["field"])
             # self.errors[dict(ex)["field"][0]] = str(dict(ex)["message"][0])
 

@@ -12,7 +12,7 @@ class User(AbstractUser):
     last_name = models.CharField(max_length=50)
     email = models.EmailField(max_length=200, unique=True)
     profile_picture = models.ImageField(
-        upload_to='uploads/users', null=True, blank=True)
+        upload_to='uploads/user', null=True, blank=True)
 
     REQUIRED_FIELDS = ["email", "first_name", "last_name"]
 

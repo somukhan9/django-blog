@@ -121,8 +121,8 @@ USE_TZ = True
 
 
 AUTHENTICATION_BACKENDS = [
-    'authapp.backends.UsernameOrEmailBackend',
     'django.contrib.auth.backends.ModelBackend',
+    'authapp.backends.UsernameOrEmailBackend',
 ]
 
 
@@ -133,6 +133,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'uploads'
